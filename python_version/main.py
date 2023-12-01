@@ -4,19 +4,23 @@ import pprint
 import tkinter
 import customtkinter
 import os.path
+import webbrowser
+import sys
 
 customtkinter.set_appearance_mode("dark")
+
 customtkinter.set_default_color_theme("green")
+
+
 
 # print(os.path.exists("api_key.txt"))
 
 def where_api_def():
-    window2 = customtkinter.CTk()
-    window2.title("Где получить API ключ")
-    window2.geometry("600x250")
-    label_window2 = customtkinter.CTkLabel(window2, text="Получить API ключ вы можете зарегестрировавшись на сайте https://checko.ru/")
-    label_window2.place(x = 50, y = 30)
-    window2.mainloop()
+    webbrowser.open("https://checko.ru/sign-up")
+
+
+
+    
 
 def save_api_key():
     if len(message.get()) < 8:
